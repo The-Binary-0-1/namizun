@@ -65,3 +65,17 @@ if [ $? != 0 ]; then
   echo "failed to add namizun to PATH environment variables"
   exit
 fi
+
+echo "activate source (step 9)"
+source /var/www/namizun/venv/bin/activate
+if [ $? != 0 ]; then
+  echo "failed to activate source"
+  exit
+fi
+
+echo "make sure setuptool installed (step 10)"
+pip install setuptools
+if [ $? != 0 ]; then
+  echo "failed to install setuptool"
+  exit
+fi
