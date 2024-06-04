@@ -117,3 +117,20 @@ High CPU consumption will cause restrictions from the provider (it is better to 
 - If you are using a **dedicated server**, it is suggested to virtualize it and use your virtual servers.\
 In this way, your traffic will be distributed among more IPs and will prevent you from being banned.
 
+
+## Remove Script
+
+- With the following commands, you can remove the script that you have already installed:
+
+```bash
+rm -r /var/www/namizun/
+```
+```bash
+rm /etc/systemd/system/namizun.service
+```
+```bash
+rm /usr/local/bin/namizun
+```
+```bash
+sudo systemctl daemon-reload
+```
